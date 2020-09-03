@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Photo Upload</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+    <h1>Contribute your photo to the collection</h1>
+    <p>Upload your file and fill entire form</p>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload" required><br>
+  <label for="fileName">Give a name to your photo</label>
+  <input type="text" name="fileName" class="fileName" placeholder="photo name" required><br>
+  <label for="tags">Enter all tags to identify image separated by spaces</label>
+  <input type="text" name="tags" class="tags" placeholder="tag1 tag2 tag3" required><br>
+
+  <!-- some way to input colour choices and mood choices -->
+
+
+
+
+  <input type="submit" value="Upload Image" name="submit">
+</form>
+
+</body>
+</html>

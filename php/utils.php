@@ -60,9 +60,32 @@ function surpriseMe($connection){
     $result = $connection->query($query);
    // echo var_dump($result);
     $row = $result->fetch_assoc();
+    
     echo'<img src='.$row['imagePath'].' alt='.$row['imageName'].'>'; //change this to displaying all images in a nice way
     echo'<br>';
     echo '<div class="caption">'.$row['imageName'].'</div>';
+    
 
+}
+
+//testmaking a grid of images!
+function allSearch2($searchterm, $connection, $query){
+    $stmt = $connection->prepare($query);
+    $stmt->bind_param('s', $searchterm);
+
+    $stmt->execute();
+    $result=$stmt->get_result();
+
+    $html='';
+    while ($row = $result->fetch_assoc()) {
+        
+        $html.='<div class="galleryitem"><div class="content"><img src='.$row['imagePath'].' alt='.$row['imageName'].'>'; //change this to displaying all images in a nice way
+       // $html.='<br>';
+        $html.='<div class="caption">'.$row['imageName'].'</div>';
+       $html.='</div></div>';
+        
+    }
+    return $html;
+    
 }
 ?>

@@ -6,24 +6,26 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Image collection</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale 1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="header">
             <h1>A carefully curated collection of searchable images</h1>
         </div>
 
+        <div class ="flex-container">
+
 
         <div class="searcharea">
             <fieldset>
-                <legend>General Search</legend>
+                <legend>Search</legend>
                 <form action='' method="post">
                     <input type="text" id="searchcriteria" name="searchcriteria" required>
                     <input type="submit" id="searchsubmit" name="searchsubmit" value="search collection">
@@ -78,27 +80,39 @@
             </fieldset>
         </div>
 
+</div>
+
+        <br>        
+
 <?php
-if (isset($_POST['searchsubmit']) && $_POST['searchcriteria'] !='' ) {
-    $searchterm = strtolower($_POST['searchcriteria']).'%';
-    $query = 'SELECT i.imagePath, i.imageName FROM images i join tags t on i.idimage = t.idimage WHERE t.tag like ?;';
-    allSearch($searchterm, $connection, $query);
-   
+//Display search results
+if (isset($_POST['randomsubmit'])){ //display random image
+    echo '<div class=singleimg>';
+    surpriseMe($connection);
+    echo '</div>';
 }
-if (isset($_POST['coloursubmit']) && $_POST['colour'] !='' ) {
+else {
+if (isset($_POST['searchsubmit']) && $_POST['searchcriteria'] !='' ) { //general search
+    $searchterm = strtolower($_POST['searchcriteria']).'%';
+    $query = 'SELECT i.imagePath, i.imageName FROM images i join tags t on i.idimage = t.idimage WHERE t.tag like ?;';   
+}
+else if (isset($_POST['coloursubmit']) && $_POST['colour'] !='' ) { //search by colour
     $searchterm = strtolower($_POST['colour']);
     $query = 'SELECT i.imagePath, i.imageName FROM images i join colours c on i.idimage = c.idimage WHERE c.colourname = ?;';
-    allSearch($searchterm, $connection, $query);
+    
 }
-if (isset($_POST['moodsubmit']) && $_POST['mood'] !='' ) {
+else if (isset($_POST['moodsubmit']) && $_POST['mood'] !='' ) { //search by mood
     $searchterm = strtolower($_POST['mood']);
     $query = 'SELECT i.imagePath, i.imageName FROM images i join moods m on i.idimage = m.idimage WHERE m.moodname = ?;';
-    allSearch($searchterm, $connection, $query);
+    //allSearch($searchterm, $connection, $query);
 }
-if (isset($_POST['randomsubmit'])){
-    surpriseMe($connection);
-}
+    echo'<div class="gallery">';
+    echo allSearch2($searchterm, $connection, $query);
+    echo'</div>';
+}  
 ?>
+
+
 
 
     </body>

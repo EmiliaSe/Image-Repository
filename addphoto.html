@@ -10,24 +10,134 @@
     </head>
 
 <body>
+    
     <h1>Contribute your photo to the collection</h1>
-    <p>Upload your file and fill entire form</p>
+    <p style="text-align:center">Upload your file and fill entire form to anonymously add your photo <br>Please ensure you have permission to share the image <br> accepted formats are LIST HERE</p>
 
+    <div class="Contentwindow">
 <form action="upload.php" method="post" enctype="multipart/form-data">
-  Select image to upload:
+
+  <label for=”fileToUpload”>Upload Image</label>
   <input type="file" name="fileToUpload" id="fileToUpload" required><br>
+
   <label for="fileName">Give a name to your photo</label>
   <input type="text" name="fileName" class="fileName" placeholder="photo name" required><br>
   <label for="tags">Enter all tags to identify image separated by spaces</label>
-  <input type="text" name="tags" class="tags" placeholder="tag1 tag2 tag3" required><br>
+  <input type="text" name="tags" class="tags" style="width:250px;" placeholder="tag1 tag2 tag3" required><br>
 
   <!-- some way to input colour choices and mood choices -->
+  <div class ="flex-upload">
+  <div class=Choices>
+  <p>Select the main colours of the image </p>
+  <input type="checkbox" name="formcolour[]" value="blue">
+  <label for="selectcolours">blue</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="green">
+  <label for="selectcolours">green</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="red">
+  <label for="selectcolours">red</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="yellow">
+  <label for="selectcolours">yellow</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="pink">
+  <label for="selectcolours">pink</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="orange">
+  <label for="selectcolours">orange</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="purple">
+  <label for="selectcolours">purple</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="white">
+  <label for="selectcolours">white</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="black">
+  <label for="selectcolours">black</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="brown">
+  <label for="selectcolours">brown</label><br>
+
+  <input type="checkbox" name="formcolour[]" value="grey">
+  <label for="selectcolours">grey</label><br>
+
+</div>
+
+
+<div class="Choices">
+    <p>Select the moods the image evokes </p>
+    <input type="checkbox" name="formmood[]" value="cheerful">
+    <label for="selectcolours">cheerful</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="reflective">
+    <label for="selectcolours">reflective</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="gloomy">
+    <label for="selectcolours">gloomy</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="lonely">
+    <label for="selectcolours">lonely</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="idyllic">
+    <label for="selectcolours">idyllic</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="whimsical">
+    <label for="selectcolours">whimsical</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="ominous">
+    <label for="selectcolours">ominous</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="calm">
+    <label for="selectcolours">calm</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="lighthearted">
+    <label for="selectcolours">lighthearted</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="hopeful">
+    <label for="selectcolours">hopeful</label><br>
+
+    <input type="checkbox" name="formmood[]" value="angry">
+    <label for="selectcolours">angry</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="fearful">
+    <label for="selectcolours">fearful</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="dreamy">
+    <label for="selectcolours">dreamy</label><br>
+  
+    <input type="checkbox" name="formmood[]" value="tense">
+    <label for="selectcolours">tense</label><br>
+
+    <input type="checkbox" name="formmood[]" value="busy">
+    <label for="selectcolours">busy</label><br>
+
+    <input type="checkbox" name="formmood[]" value="patriotic">
+    <label for="selectcolours">patriotic</label><br>
+
+    <input type="checkbox" name="formmood[]" value="greedy">
+    <label for="selectcolours">greedy</label><br>
+
+    <input type="checkbox" name="formmood[]" value="hopeful">
+    <label for="selectcolours">hopeful</label><br>
+
+    <input type="checkbox" name="formmood[]" value="lively">
+    <label for="selectcolours">lively</label><br>
+
+    <input type="checkbox" name="formmood[]" value="healthy">
+    <label for="selectcolours">healthy</label><br>
+  
+  </div>
+
+</div> 
+  
+
 
 
 
 
   <input type="submit" value="Upload Image" name="submit">
 </form>
-
+</div>
 </body>
 </html>

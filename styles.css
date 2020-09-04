@@ -33,6 +33,14 @@ body{
     justify-content:center;
   }
 
+  .flex-upload {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content:left;
+    
+}  
+
   .gallery { 
     column-count: 3;
     column-gap: 1em;
@@ -71,12 +79,28 @@ body{
     margin-right: auto;
   }
 
+   .Choices {
+      padding-right: 10px;
+  } 
+
+.Contentwindow {
+     max-width:660px;
+     padding: 10px;
+     background-color: #e9f7ff;
+     border-radius: 20px;
+   /* margin-right: auto;
+    margin-left: auto;
+    float: none; */
+    /* display:inline-block; */
+    margin:0 auto;
+}  
+
 
   input:focus {
     outline:none;
 }
 
-  input[type=submit] {
+  input[type=submit], input[type=file] {
     background-color: #c7ebff;
     color: #414f57;
     padding: 8px 8px;
@@ -84,6 +108,7 @@ body{
     border-radius: 20px;
     float: inline-end;
   }
+
   
   input[type=submit]:hover {
     background-color: #bcd9e9;

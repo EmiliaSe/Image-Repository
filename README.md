@@ -10,7 +10,7 @@ small project creating a searchable image repository
 
 ## E/R diagram of database
 
-![ER diagram](documentation/DB ER diagram.png)
+![ER diagram](https://github.com/EmiliaSe/Image-Repository/blob/master/documentation/DB%20ER%20diagram.png)
 
 ## Possible extensions
 

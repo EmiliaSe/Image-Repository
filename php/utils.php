@@ -68,7 +68,7 @@ function surpriseMe($connection){
 
 }
 
-//testmaking a grid of images!
+//testmaking a grid of images. Returns a string containing gallery layout of search results
 function allSearch2($searchterm, $connection, $query){
     $stmt = $connection->prepare($query);
     $stmt->bind_param('s', $searchterm);
@@ -76,7 +76,14 @@ function allSearch2($searchterm, $connection, $query){
     $stmt->execute();
     $result=$stmt->get_result();
 
-    $html='';
+    if (mysqli_num_rows($result)==0){
+        echo '<br><br><p style="text-align:center">No images match your search<br>';
+        echo 'Would you like to anonymously add an image?<br>';
+        echo '<a href="addphoto.html" >Submit photo</a></p>';
+    }
+    else{
+
+    $html='<div class="gallery">';
     while ($row = $result->fetch_assoc()) {
         
         $html.='<div class="galleryitem"><div class="content"><img src='.$row['imagePath'].' alt='.$row['imageName'].'>'; //change this to displaying all images in a nice way
@@ -85,6 +92,8 @@ function allSearch2($searchterm, $connection, $query){
        $html.='</div></div>';
         
     }
+    $html.='</div>';
+}
     return $html;
     
 }

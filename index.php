@@ -104,11 +104,16 @@ else if (isset($_POST['coloursubmit']) && $_POST['colour'] !='' ) { //search by 
 else if (isset($_POST['moodsubmit']) && $_POST['mood'] !='' ) { //search by mood
     $searchterm = strtolower($_POST['mood']);
     $query = 'SELECT i.imagePath, i.imageName FROM images i join moods m on i.idimage = m.idimage WHERE m.moodname = ?;';
-    //allSearch($searchterm, $connection, $query);
+   
 }
-    echo'<div class="gallery">';
+else {
+    //display something when site initally loaded!
+    $query = "SELECT i.imagePath, i.imageName FROM images i LIMIT ?;";
+    $searchterm = '9';
+}
+    
     echo allSearch2($searchterm, $connection, $query);
-    echo'</div>';
+    
 }  
 ?>
 

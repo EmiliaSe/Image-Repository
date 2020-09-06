@@ -8,6 +8,15 @@ h1{
 body{
     font-family: 'Roboto',Helvetica, sans-serif;
 }
+/*seems to be doing nothing for links? */
+a {
+    text-decoration: none;
+    background-color:  #c7ebff;
+}
+
+a:hover {
+    background-color: #bcd9e9;
+}
 
 /* img{
     width:100%;

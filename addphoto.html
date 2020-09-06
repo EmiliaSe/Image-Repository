@@ -15,13 +15,13 @@
     <p style="text-align:center">Upload your file and fill entire form to anonymously add your photo <br>Please ensure you have permission to share the image <br> accepted formats are LIST HERE</p>
 
     <div class="Contentwindow">
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="php/upload.php" method="post" enctype="multipart/form-data">
 
   <label for=”fileToUpload”>Upload Image</label>
   <input type="file" name="fileToUpload" id="fileToUpload" required><br>
 
   <label for="fileName">Give a name to your photo</label>
-  <input type="text" name="fileName" class="fileName" placeholder="photo name" required><br>
+  <input type="text" name="photoName" class="photoName" placeholder="photo name" required><br>
   <label for="tags">Enter all tags to identify image separated by spaces</label>
   <input type="text" name="tags" class="tags" style="width:250px;" placeholder="tag1 tag2 tag3" required><br>
 
@@ -130,12 +130,6 @@
   </div>
 
 </div> 
-  
-
-
-
-
-
   <input type="submit" value="Upload Image" name="submit">
 </form>
 </div>

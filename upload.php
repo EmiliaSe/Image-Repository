@@ -12,8 +12,8 @@
 <body>
 
 <?php
-require_once 'php/config.php';
-require_once 'php/utils.php';
+require_once 'include/config.php';
+require_once 'include/utils.php';
 
 $connection = connect_to_db($db_hostname, $db_username, $db_password, $db_database);
 // var_dump($_FILES);
@@ -129,7 +129,6 @@ if (isset($_FILES['fileToUpload'])) {
             $result=$stmt->get_result();
         } 
     }
-
     //INSERT INTO MOODS
     if ($colours){
         $query = 'INSERT into moods values (?,?);';

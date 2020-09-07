@@ -2,7 +2,7 @@
 
 small project creating a searchable image repository
 
-## featurs
+## features
 * Using a simple web interface that allows users to view a curated collection of images
 * Users can search either by keywords, colours, moods or view a random image
 * images were initially sourced from unsplashed.com and some personal photos
@@ -26,3 +26,7 @@ idimage is used as the foreign key for colours, tags and moods. Auto-incremented
 * Allow users option to declare new colours / moods not specified in upload page
 * Improve UI
 * Autocomplete / suggest when user starts typing search
+
+## Screenshots
+
+* add links!

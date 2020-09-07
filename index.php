@@ -1,6 +1,6 @@
 <?php
- require_once 'php/config.php';
- require_once 'php/utils.php';
+ require_once 'include/config.php';
+ require_once 'include/utils.php';
   
  $connection = connect_to_db($db_hostname, $db_username, $db_password, $db_database);
 
@@ -118,7 +118,7 @@ else {
 ?>
 
 
-
-
+<br><br>
+<p style="text-align:center"><a href="addphoto.html">Contribute your photo<a></div>
     </body>
 </html>

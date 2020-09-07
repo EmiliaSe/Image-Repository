@@ -28,5 +28,17 @@ idimage is used as the foreign key for colours, tags and moods. Auto-incremented
 * Autocomplete / suggest when user starts typing search
 
 ## Screenshots
+Main page
+![Main page](LINK HERE)
 
-* add links!
+Upload page
+![Upload page](LINK HERE)
+
+Sample search
+![cat search](LINK HERE)
+
+Colour search
+![orange search](LINK HERE)
+
+Mood search
+![cheerful search](LINK HERE)

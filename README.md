@@ -29,16 +29,16 @@ idimage is used as the foreign key for colours, tags and moods. Auto-incremented
 
 ## Screenshots
 Main page
-![Main page](LINK HERE)
+![Main page](https://github.com/EmiliaSe/Image-Repository/blob/master/documentation/mainpage%20screenshot.png)
 
 Upload page
-![Upload page](LINK HERE)
+![Upload page](https://github.com/EmiliaSe/Image-Repository/blob/master/documentation/submission%20screenshot.png)
 
 Sample search
-![cat search](LINK HERE)
+![cat search](https://github.com/EmiliaSe/Image-Repository/blob/master/documentation/catsearch.gif)
 
 Colour search
-![orange search](LINK HERE)
+![orange search](https://github.com/EmiliaSe/Image-Repository/blob/master/documentation/orangesearch.gif)
 
 Mood search
-![cheerful search](LINK HERE)
+![cheerful search](https://github.com/EmiliaSe/Image-Repository/blob/master/documentation/cheerfulsearch.gif)

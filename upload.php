@@ -130,7 +130,7 @@ if (isset($_FILES['fileToUpload'])) {
         } 
     }
     //INSERT INTO MOODS
-    if ($colours){
+    if ($moods){
         $query = 'INSERT into moods values (?,?);';
         $stmt = $connection->prepare($query);
         $stmt->bind_param('ss', $id, $mood);
